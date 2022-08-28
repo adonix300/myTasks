@@ -1,7 +1,6 @@
 import java.util.Arrays;
 
 public class MinAndMax {
-    static MinAndMax m = new MinAndMax();
     static int[] array;
 
     public static void main(String[] args) {
@@ -11,12 +10,12 @@ public class MinAndMax {
             array[i] = getRandom(0, 100);
         }
 
-        m.printArray(array);
-        m.giveMaxMinAvg(array);
+        printArray(array);
+        giveMaxMinAvg(array);
 
     }
 
-    public void printArray(int[] array) {
+    public static void printArray(int[] array) {
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + " ");
         }
@@ -28,7 +27,7 @@ public class MinAndMax {
         return x;
     }
 
-    public void giveMaxMinAvg(int[] array) {
+    public static void giveMaxMinAvg(int[] array) {
         int[] array2 = Arrays.copyOf(array, array.length);
         Arrays.sort(array2);
         int avg = 0;
@@ -41,5 +40,4 @@ public class MinAndMax {
         System.out.println("min = " + array2[0]);
         System.out.println("avg = " + avg);
     }
-
 }
